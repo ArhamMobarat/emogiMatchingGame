@@ -1,0 +1,94 @@
+@keyframes spin3D1{
+    from{transform: rotateY(180deg)}
+    to{transform: rotateY(0deg)}
+}
+@keyframes spin3D2{
+    from{transform: rotateY(0deg)}
+    to{transform: rotateY(180deg)}
+}
+.spin3D1{
+    animation: spin3D1 0.5s ease-in-out ;
+}
+.spin3D2{
+    animation: spin3D2 0.5s ease-in-out ;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(123, 164, 2);
+    display: flex;
+    justify-content: center;
+    font-family: "Pixelify Sans", sans-serif;
+}
+.container{
+    background-color: rgb(89, 213, 6);
+    text-align:center;
+    font-size: 1rem;
+    width: 25rem;
+    margin-top: 10%;
+}
+h1{
+    margin-bottom: 2rem;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+}
+.grid_item{
+    background-color: #97f904;
+    height: 4rem;
+    width: 4rem;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 1rem;
+}
+.grid_item > img{
+    height: 85%;
+    margin: 7.5%;
+    transform: rotateY(360deg);
+}
+button{
+    background-color: rgb(152, 236, 8);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    color: rgb(104, 161, 5);
+    margin-bottom: 5%;
+    border-radius: 10%;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+button:active{
+    background-color: rgb(236, 244, 4);
+    color: rgb(227, 238, 227)
+}
+.win{
+    z-index: 20;
+    background-color: rgb(7, 241, 77);
+    padding: 3rem 5rem;
+    position: fixed;
+    top: 40%;
+}
+.playerScoreContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 1rem;
+    grid-row: 1/span2;
+}
+.player1{
+    background-color: red;
+    color: orange;
+}
+.player2{
+    background-color: blue;
+    color: lightblue;
+}
+.player{
+    font-size: 2rem;
+}
